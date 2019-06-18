@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="WeatherData.Client.Tests\obj\Debug\netcoreapp2.0\WeatherData.Client.Tests.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Concretions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherData.Models\WeatherData.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Interfaces\IWeatherDataClient.cs" />
+  </ItemGroup>
+</Project>
