@@ -49,7 +49,7 @@ namespace WeatherData.Models.Weather
         public long Humidity { get; set; }
 
         [JsonProperty("visibility")]
-        public double Visibility { get; set; }
+        public double? Visibility { get; set; }
 
         [JsonProperty("predictability")]
         public long Predictability { get; set; }

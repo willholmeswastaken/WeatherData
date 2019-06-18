@@ -6,6 +6,7 @@ using WeatherData.Client.Interfaces;
 using WeatherData.Models;
 using WeatherData.Models.Exceptions;
 using WeatherData.Models.Weather;
+using System.Linq;
 
 namespace WeatherData.Client.Concretions
 {
@@ -45,32 +46,35 @@ namespace WeatherData.Client.Concretions
                 throw new WeatherByLocationError("Failed to get weather by location", woeId);
             }
 
-            var result = await response
+            return JsonConvert
+                .DeserializeObject<WeatherResult>(await response
                 .Content
-                .ReadAsStringAsync();
-
-            return JsonConvert.DeserializeObject<WeatherResult>(result);
+                .ReadAsStringAsync());
         }
 
         public async Task<WeatherResult> GetWeatherForDateByLocation(DateTime date, string woeId)
         {
             var response = await this
                 .Client
-                .GetAsync($"{woeId}/{date.ToString("yyyy/mm/dd")}");
+                .GetAsync($"{woeId}/{date.ToString("yyyy/MM/dd")}");
 
             if (!response.IsSuccessStatusCode)
             {
                 throw new WeatherByLocationAndDateError(
-                    "Failed to get weather by location",
+                    "Failed to get weather by location and date",
                     woeId,
                     date);
             }
 
-            var result = await response
-                .Content
-                .ReadAsStringAsync();
-
-            return JsonConvert.DeserializeObject<WeatherResult>(result);
+            var result = new WeatherResult();
+            result.ConsolidatedWeather = JsonConvert
+                    .DeserializeObject<ConsolidatedWeather[]>
+                    (await response
+                        .Content
+                     .ReadAsStringAsync());
+            result.WoeId = long.Parse(woeId);
+            
+            return result;
         }
     }
 }

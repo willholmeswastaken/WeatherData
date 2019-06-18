@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using WeatherData.Models;
+using WeatherData.Models.Location;
 
 namespace WeatherData.Client.Interfaces
 {

@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using WeatherData.Client.Interfaces;
 using WeatherData.Models;
 using WeatherData.Models.Exceptions;
+using WeatherData.Models.Location;
 
 namespace WeatherData.Client.Concretions
 {

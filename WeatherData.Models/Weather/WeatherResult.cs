@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using WeatherData.Models.Location;
 
 namespace WeatherData.Models.Weather
 {
@@ -34,7 +35,7 @@ namespace WeatherData.Models.Weather
         public string LocationType { get; set; }
 
         [JsonProperty("woeid")]
-        public long Woeid { get; set; }
+        public long WoeId { get; set; }
 
         [JsonProperty("latt_long")]
         public string LattLong { get; set; }

@@ -2,7 +2,7 @@
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace WeatherData.Models
+namespace WeatherData.Models.Location
 {
     public class LocationResult
     {

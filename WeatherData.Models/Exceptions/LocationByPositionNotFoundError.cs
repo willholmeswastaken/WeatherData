@@ -1,4 +1,6 @@
 ﻿using System;
+using WeatherData.Models.Location;
+
 namespace WeatherData.Models.Exceptions
 {
     public class LocationByPositionNotFoundError : Exception

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WeatherData.Models
+namespace WeatherData.Models.Location
 {
     public class Position
     {

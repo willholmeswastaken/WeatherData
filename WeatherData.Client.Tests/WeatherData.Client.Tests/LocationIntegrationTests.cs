@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using WeatherData.Client.Concretions;
 using WeatherData.Client.Interfaces;
-using WeatherData.Models;
+using WeatherData.Models.Location;
 using WeatherData.Models.Exceptions;
 using Xunit;
 
@@ -28,13 +28,13 @@ namespace WeatherData.Client.Tests
         [Theory]
         [InlineData("")]
         [InlineData("Manchesterr")]
-        public async Task GetLocationQuery_GetLocationByCity_Executes_Failure(string city)
+        public async Task GetLocationQuery_GetLocationByCity_Executes_Failure(string invalidCity)
         {
             // Arrange
             IGetLocationQuery query = new GetLocationQuery();
 
             // Act & Assert
-            await Assert.ThrowsAsync<LocationByCityNotFoundError>(async () => await query.GetLocationByCity(city));
+            await Assert.ThrowsAsync<LocationByCityNotFoundError>(async () => await query.GetLocationByCity(invalidCity));
         }
 
         [Theory]
