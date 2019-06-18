@@ -6,8 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WeatherData.Models\WeatherData.Models.csproj" />
-    <ProjectReference Include="..\WeatherData.Utils\WeatherData.Utils.csproj" />
-    <ProjectReference Include="..\WeatherData.Client\WeatherData.Client.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Class1.cs" />

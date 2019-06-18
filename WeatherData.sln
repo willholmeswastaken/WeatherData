@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{4F1CC1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherData.Client.Tests", "WeatherData.Client.Tests\WeatherData.Client.Tests\WeatherData.Client.Tests.csproj", "{4DA6A962-FB1B-4F6B-ABEE-04A5EA40E9AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherData.Utils", "WeatherData.Utils\WeatherData.Utils.csproj", "{15C79832-8270-4F8F-9031-4A888D2F0154}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4DA6A962-FB1B-4F6B-ABEE-04A5EA40E9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DA6A962-FB1B-4F6B-ABEE-04A5EA40E9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DA6A962-FB1B-4F6B-ABEE-04A5EA40E9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C79832-8270-4F8F-9031-4A888D2F0154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C79832-8270-4F8F-9031-4A888D2F0154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C79832-8270-4F8F-9031-4A888D2F0154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C79832-8270-4F8F-9031-4A888D2F0154}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DDDA98FF-57F5-4C31-A917-C8FD11814F83} = {4F1CC122-EA03-4E00-BDF2-B62C05DC1732}
