@@ -6,6 +6,8 @@ https://www.metaweather.com/api/
 https://www.nuget.org/packages/WeatherData.NET/1.0.0
 
 # Getting Started
+```
 nuget install WeatherData.NET
+```
 
 See example project to see it's implementation
