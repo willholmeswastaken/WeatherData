@@ -36,7 +36,7 @@ namespace WeatherData.Client.Tests
             // Act & Assert
             await Assert.ThrowsAsync<LocationByCityNotFoundError>(async () => await query.GetLocationByCity(invalidCity));
         }
-
+            
         [Theory]
         [InlineData("51.506321", "-0.12714")]
         [InlineData("52.637981", "-1.140430")]

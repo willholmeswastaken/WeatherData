@@ -16,7 +16,7 @@ namespace WeatherData
             this.weatherQuery = new GetWeatherQuery();
         }
 
-        public WeatherDataService(GetLocationQuery locationQuery, GetWeatherQuery weatherQuery)
+        public WeatherDataService(IGetLocationQuery locationQuery, IGetWeatherQuery weatherQuery)
         {
             this.locationQuery = locationQuery;
             this.weatherQuery = weatherQuery;
