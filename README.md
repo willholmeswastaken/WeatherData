@@ -2,6 +2,10 @@
 A c# library to wrap a weather api and make it easy to use &amp; integrate.
 https://www.metaweather.com/api/
 
-Todo:
-Unit test service
-Publish to nuget
+# Nuget Package Url:
+https://www.nuget.org/packages/WeatherData.NET/1.0.0
+
+# Getting Started
+nuget install WeatherData.NET
+
+See example project to see it's implementation
