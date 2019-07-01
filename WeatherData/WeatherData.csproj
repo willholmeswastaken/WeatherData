@@ -1,6 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>WeatherData.NET</PackageId>
+    <Version>1.0.2</Version>
+    <Authors>Will Holmes</Authors>
+    <PackageDescription>A .NET Standard library to get weather data results for locations by city or lat,lon </PackageDescription>
+    <copyright>Will Holmes</copyright>
+    <tags>weather weatherdata</tags>
+    <RepositoryUrl>https://github.com/willholmeswastaken/WeatherData</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 

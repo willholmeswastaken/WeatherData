@@ -8,8 +8,11 @@ using WeatherData.Utils;
 
 namespace WeatherData
 {
-    public class WeatherDataService : IWeatherDataService, IDisposable
+    public class WeatherDataService : IWeatherDataService
     {
+        private readonly IGetLocationQuery locationQuery;
+        private readonly IGetWeatherQuery weatherQuery;
+
         public WeatherDataService()
         {
             this.locationQuery = new GetLocationQuery();
@@ -21,9 +24,6 @@ namespace WeatherData
             this.locationQuery = locationQuery;
             this.weatherQuery = weatherQuery;
         }
-
-        private readonly IGetLocationQuery locationQuery;
-        private readonly IGetWeatherQuery weatherQuery;
 
         public async Task<WeatherResult> GetTodaysWeatherDataByCity(string city)
         {

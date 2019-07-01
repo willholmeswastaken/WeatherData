@@ -12,6 +12,8 @@ namespace WeatherData.Client.Concretions
 {
     public class GetLocationQuery : IGetLocationQuery
     {
+        public HttpClient Client { get; set; }
+
         public GetLocationQuery()
         {
             this.Client = new HttpClient() {
@@ -23,8 +25,6 @@ namespace WeatherData.Client.Concretions
         {
             this.Client = client;
         }
-
-        public HttpClient Client { get; set; }
 
         public void Dispose()
         {
