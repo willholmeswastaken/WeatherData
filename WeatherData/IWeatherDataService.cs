@@ -4,7 +4,7 @@ using WeatherData.Models.Weather;
 
 namespace WeatherData
 {
-    public interface IWeatherDataService
+    public interface IWeatherDataService : IDisposable
     {
         Task<WeatherResult> GetTodaysWeatherDataByCity(string city);
 

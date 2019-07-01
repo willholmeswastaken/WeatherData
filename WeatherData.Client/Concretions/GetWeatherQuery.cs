@@ -66,13 +66,15 @@ namespace WeatherData.Client.Concretions
                     date);
             }
 
-            var result = new WeatherResult();
-            result.ConsolidatedWeather = JsonConvert
+            var result = new WeatherResult
+            {
+                ConsolidatedWeather = JsonConvert
                     .DeserializeObject<ConsolidatedWeather[]>
                     (await response
                         .Content
-                     .ReadAsStringAsync());
-            result.WoeId = long.Parse(woeId);
+                     .ReadAsStringAsync()),
+                WoeId = long.Parse(woeId)
+            };
             
             return result;
         }
