@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WeatherData\WeatherData.csproj" />
+    <PackageReference Include="WeatherData.NET" Version="1.0.5" />
   </ItemGroup>
 </Project>
