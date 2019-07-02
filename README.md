@@ -7,7 +7,7 @@ https://www.nuget.org/packages/WeatherData.NET
 
 ## Getting Started
 ```
-Install-Package WeatherData.NET -Version 1.0.2
+Install-Package WeatherData.NET -Version 1.0.5
 ```
 
 ## Using the library
