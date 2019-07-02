@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>WeatherData.NET</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Will Holmes</Authors>
     <PackageDescription>A .NET Standard library to get weather data results for locations by city or lat,lon </PackageDescription>
     <copyright>Will Holmes</copyright>
