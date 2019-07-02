@@ -2,20 +2,34 @@
 
   <PropertyGroup>
     <PackageId>WeatherData.NET</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.5</Version>
     <Authors>Will Holmes</Authors>
     <PackageDescription>A .NET Standard library to get weather data results for locations by city or lat,lon </PackageDescription>
     <copyright>Will Holmes</copyright>
     <tags>weather weatherdata</tags>
     <RepositoryUrl>https://github.com/willholmeswastaken/WeatherData</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <releaseNotes>Fixed issue with resolving dependencies, refactored code and added more documentation</releaseNotes>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WeatherData.Models\WeatherData.Models.csproj" />
-    <ProjectReference Include="..\WeatherData.Utils\WeatherData.Utils.csproj" />
-    <ProjectReference Include="..\WeatherData.Client\WeatherData.Client.csproj" />
+    <ProjectReference Include="..\WeatherData.Models\WeatherData.Models.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\WeatherData.Utils\WeatherData.Utils.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\WeatherData.Client\WeatherData.Client.csproj" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+
   <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
