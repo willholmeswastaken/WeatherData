@@ -2,12 +2,14 @@
 A c# library to wrap a weather api and make it easy to use &amp; integrate.
 https://www.metaweather.com/api/
 
+[![Downloads Badge](https://img.shields.io/nuget/dt/WeatherData.NET)](https://www.nuget.org/packages/WeatherData.NET)
+
 ## Nuget Package Url:
 https://www.nuget.org/packages/WeatherData.NET
 
 ## Getting Started
 ```
-Install-Package WeatherData.NET -Version 1.0.5
+Install-Package WeatherData.NET -Version 2.0.0
 ```
 
 ## Using the library
